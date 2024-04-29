@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            background-color: rgb(191, 191, 191);
+            height: 50vh;
+            width: 50vw;
+            margin: 20vh auto;
+            border: 8px solid white;
+            position: relative;
+            box-shadow: 0 0 8px 0;
+        }
+        div {
+            width: 20%;
+            height: 20%;
+            background-color: purple;
+            position: absolute;
+            border-radius: 50%;
+            left: 0;
+            top: 0;
+            animation: ballAnimation 4s ease-in-out infinite;
+        }
+        @keyframes ballAnimation {
+            25% {
+                top: 0;
+                left: 80%;
+                background-color: red;
+                border-radius: 0;
+            }
+            50% {
+                top: 80%;
+                left: 80%;
+                background-color: green;
+                border-radius: 50%;
+            }
+            75% {
+                top: 80%;
+                left: 0;
+                background-color: orange;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div></div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: rgb(23, 109, 102);
+        }
+
+        main {
+            width: 60vw;
+            height: 60vh;
+            margin: 30vh auto;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+        }
+
+        span {
+            background-color: rgba(255, 255, 255, 0.58);
+            width: 30px;
+            height: 30px;
+            display: block;
+            position: absolute;
+            border-radius: 50%;
+            position: absolute;
+            top: 55vh;
+            margin: 0 auto;
+            z-index: -1;
+            opacity: .3;
+            animation: steamEffects1 linear 2s infinite;
+        }
+
+        span:nth-child(even) {
+            animation: steamEffects2 linear 2s infinite;
+        }
+
+        span:nth-child(2) {
+            animation-duration: 3s;
+            animation-delay: .1s;
+        }
+
+        span:nth-child(3) {
+            animation-duration: 4s;
+            animation-delay: .2s;
+        }
+
+        span:last-child {
+            animation-duration: 5s;
+            animation-delay: .5s;
+        }
+
+        @keyframes steamEffects1 {
+            from {
+                width: 30px;
+                height: 30px;
+                transform: translateX(0);
+                opacity: 1;
+                top: 55vh;
+            }
+
+            to {
+                width: 70px;
+                height: 70px;
+                transform: translateX(-30px);
+                opacity: 0;
+                top: 20vh;
+            }
+        }
+
+        @keyframes steamEffects2 {
+            from {
+                width: 30px;
+                height: 30px;
+                transform: translateX(0);
+                opacity: 1;
+                top: 55vh;
+            }
+
+            to {
+                width: 80px;
+                height: 80px;
+                transform: translateX(30px);
+                opacity: 0;
+                top: 25vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <img src="assets/cup.png" alt="cup">
+        </div>
+    </main>
+</body>
+
+</html>
